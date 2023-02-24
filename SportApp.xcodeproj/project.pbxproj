@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		B3430CC129A94BB200EA114B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CC029A94BB200EA114B /* AppDelegate.swift */; };
 		B3430CC329A94BB200EA114B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CC229A94BB200EA114B /* SceneDelegate.swift */; };
-		B3430CC529A94BB200EA114B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CC429A94BB200EA114B /* ViewController.swift */; };
-		B3430CC829A94BB200EA114B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3430CC629A94BB200EA114B /* Main.storyboard */; };
+		B3430CC529A94BB200EA114B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CC429A94BB200EA114B /* MainViewController.swift */; };
 		B3430CCA29A94BB300EA114B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3430CC929A94BB300EA114B /* Assets.xcassets */; };
 		B3430CCD29A94BB300EA114B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3430CCB29A94BB300EA114B /* LaunchScreen.storyboard */; };
+		B3430CDA29A94FC900EA114B /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CD929A94FC900EA114B /* CalendarView.swift */; };
+		B3430CDC29A9512700EA114B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B3430CDB29A9512700EA114B /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B3430CBD29A94BB200EA114B /* SportApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3430CC029A94BB200EA114B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3430CC229A94BB200EA114B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B3430CC429A94BB200EA114B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B3430CC729A94BB200EA114B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B3430CC429A94BB200EA114B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B3430CC929A94BB300EA114B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3430CCC29A94BB300EA114B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3430CCE29A94BB300EA114B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3430CD929A94FC900EA114B /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		B3430CDB29A9512700EA114B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		B3430CB429A94BB200EA114B = {
 			isa = PBXGroup;
 			children = (
+				B3430CDB29A9512700EA114B /* .gitignore */,
 				B3430CBF29A94BB200EA114B /* SportApp */,
 				B3430CBE29A94BB200EA114B /* Products */,
 			);
@@ -56,15 +59,55 @@
 		B3430CBF29A94BB200EA114B /* SportApp */ = {
 			isa = PBXGroup;
 			children = (
-				B3430CC029A94BB200EA114B /* AppDelegate.swift */,
-				B3430CC229A94BB200EA114B /* SceneDelegate.swift */,
-				B3430CC429A94BB200EA114B /* ViewController.swift */,
-				B3430CC629A94BB200EA114B /* Main.storyboard */,
-				B3430CC929A94BB300EA114B /* Assets.xcassets */,
-				B3430CCB29A94BB300EA114B /* LaunchScreen.storyboard */,
-				B3430CCE29A94BB300EA114B /* Info.plist */,
+				B3430CD429A94DDA00EA114B /* MainModule */,
+				B3430CD729A94E2400EA114B /* Application */,
+				B3430CD829A94E8300EA114B /* SupportingFiles */,
 			);
 			path = SportApp;
+			sourceTree = "<group>";
+		};
+		B3430CD429A94DDA00EA114B /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				B3430CD529A94DEC00EA114B /* Views */,
+				B3430CD629A94DF800EA114B /* Controllers */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		B3430CD529A94DEC00EA114B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3430CD929A94FC900EA114B /* CalendarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B3430CD629A94DF800EA114B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B3430CC429A94BB200EA114B /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B3430CD729A94E2400EA114B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B3430CC029A94BB200EA114B /* AppDelegate.swift */,
+				B3430CC229A94BB200EA114B /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B3430CD829A94E8300EA114B /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B3430CCB29A94BB300EA114B /* LaunchScreen.storyboard */,
+				B3430CC929A94BB300EA114B /* Assets.xcassets */,
+				B3430CCE29A94BB300EA114B /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3430CCD29A94BB300EA114B /* LaunchScreen.storyboard in Resources */,
+				B3430CDC29A9512700EA114B /* .gitignore in Resources */,
 				B3430CCA29A94BB300EA114B /* Assets.xcassets in Resources */,
-				B3430CC829A94BB200EA114B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +181,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3430CC529A94BB200EA114B /* ViewController.swift in Sources */,
+				B3430CC529A94BB200EA114B /* MainViewController.swift in Sources */,
 				B3430CC129A94BB200EA114B /* AppDelegate.swift in Sources */,
+				B3430CDA29A94FC900EA114B /* CalendarView.swift in Sources */,
 				B3430CC329A94BB200EA114B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B3430CC629A94BB200EA114B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B3430CC729A94BB200EA114B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B3430CCB29A94BB300EA114B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,10 +325,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B23D9298UD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SportApp/Info.plist;
+				INFOPLIST_FILE = SportApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +352,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B23D9298UD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SportApp/Info.plist;
+				INFOPLIST_FILE = SportApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
