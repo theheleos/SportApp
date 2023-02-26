@@ -16,6 +16,8 @@
 		B3430CDC29A9512700EA114B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B3430CDB29A9512700EA114B /* .gitignore */; };
 		B3430CDF29A9589B00EA114B /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CDE29A9589B00EA114B /* WeatherView.swift */; };
 		B3430CE429ABA81F00EA114B /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CE329ABA81F00EA114B /* UIView + Extension.swift */; };
+		B3430CE829ABA9B100EA114B /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3430CE629ABA9B100EA114B /* Roboto-Bold.ttf */; };
+		B3430CE929ABA9B100EA114B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3430CE729ABA9B100EA114B /* Roboto-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		B3430CDB29A9512700EA114B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B3430CDE29A9589B00EA114B /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		B3430CE329ABA81F00EA114B /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		B3430CE629ABA9B100EA114B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		B3430CE729ABA9B100EA114B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 		B3430CD829A94E8300EA114B /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				B3430CE529ABA95500EA114B /* Fonts */,
 				B3430CCB29A94BB300EA114B /* LaunchScreen.storyboard */,
 				B3430CC929A94BB300EA114B /* Assets.xcassets */,
 				B3430CCE29A94BB300EA114B /* Info.plist */,
@@ -130,6 +135,15 @@
 				B3430CE329ABA81F00EA114B /* UIView + Extension.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		B3430CE529ABA95500EA114B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B3430CE629ABA9B100EA114B /* Roboto-Bold.ttf */,
+				B3430CE729ABA9B100EA114B /* Roboto-Medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,8 +204,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3430CE929ABA9B100EA114B /* Roboto-Medium.ttf in Resources */,
 				B3430CCD29A94BB300EA114B /* LaunchScreen.storyboard in Resources */,
 				B3430CDC29A9512700EA114B /* .gitignore in Resources */,
+				B3430CE829ABA9B100EA114B /* Roboto-Bold.ttf in Resources */,
 				B3430CCA29A94BB300EA114B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
