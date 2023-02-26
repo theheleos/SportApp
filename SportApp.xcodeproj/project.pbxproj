@@ -18,6 +18,10 @@
 		B3430CE429ABA81F00EA114B /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CE329ABA81F00EA114B /* UIView + Extension.swift */; };
 		B3430CE829ABA9B100EA114B /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3430CE629ABA9B100EA114B /* Roboto-Bold.ttf */; };
 		B3430CE929ABA9B100EA114B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3430CE729ABA9B100EA114B /* Roboto-Medium.ttf */; };
+		B3430CEC29ABC6EF00EA114B /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CEA29ABC6EF00EA114B /* UIColor + Extensions.swift */; };
+		B3430CED29ABC6EF00EA114B /* UIFont + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CEB29ABC6EF00EA114B /* UIFont + Extensions.swift */; };
+		B3430CF029ABCA1900EA114B /* CalendarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CEF29ABCA1900EA114B /* CalendarCollectionView.swift */; };
+		B3430CF429ABCFF600EA114B /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CF329ABCFF600EA114B /* CalendarCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		B3430CE329ABA81F00EA114B /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		B3430CE629ABA9B100EA114B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		B3430CE729ABA9B100EA114B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		B3430CEA29ABC6EF00EA114B /* UIColor + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
+		B3430CEB29ABC6EF00EA114B /* UIFont + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont + Extensions.swift"; sourceTree = "<group>"; };
+		B3430CEF29ABCA1900EA114B /* CalendarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionView.swift; sourceTree = "<group>"; };
+		B3430CF329ABCFF600EA114B /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +95,10 @@
 		B3430CD529A94DEC00EA114B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B3430CF129ABCFD800EA114B /* Cells */,
 				B3430CD929A94FC900EA114B /* CalendarView.swift */,
 				B3430CDE29A9589B00EA114B /* WeatherView.swift */,
+				B3430CEF29ABCA1900EA114B /* CalendarCollectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,6 +142,8 @@
 		B3430CE229ABA80400EA114B /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				B3430CEA29ABC6EF00EA114B /* UIColor + Extensions.swift */,
+				B3430CEB29ABC6EF00EA114B /* UIFont + Extensions.swift */,
 				B3430CE329ABA81F00EA114B /* UIView + Extension.swift */,
 			);
 			path = UIKit;
@@ -144,6 +156,14 @@
 				B3430CE729ABA9B100EA114B /* Roboto-Medium.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B3430CF129ABCFD800EA114B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B3430CF329ABCFF600EA114B /* CalendarCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +242,10 @@
 				B3430CC529A94BB200EA114B /* MainViewController.swift in Sources */,
 				B3430CC129A94BB200EA114B /* AppDelegate.swift in Sources */,
 				B3430CE429ABA81F00EA114B /* UIView + Extension.swift in Sources */,
+				B3430CEC29ABC6EF00EA114B /* UIColor + Extensions.swift in Sources */,
+				B3430CF429ABCFF600EA114B /* CalendarCollectionViewCell.swift in Sources */,
+				B3430CF029ABCA1900EA114B /* CalendarCollectionView.swift in Sources */,
+				B3430CED29ABC6EF00EA114B /* UIFont + Extensions.swift in Sources */,
 				B3430CDF29A9589B00EA114B /* WeatherView.swift in Sources */,
 				B3430CDA29A94FC900EA114B /* CalendarView.swift in Sources */,
 				B3430CC329A94BB200EA114B /* SceneDelegate.swift in Sources */,
