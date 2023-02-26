@@ -15,6 +15,7 @@
 		B3430CDA29A94FC900EA114B /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CD929A94FC900EA114B /* CalendarView.swift */; };
 		B3430CDC29A9512700EA114B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B3430CDB29A9512700EA114B /* .gitignore */; };
 		B3430CDF29A9589B00EA114B /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CDE29A9589B00EA114B /* WeatherView.swift */; };
+		B3430CE429ABA81F00EA114B /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CE329ABA81F00EA114B /* UIView + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B3430CD929A94FC900EA114B /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		B3430CDB29A9512700EA114B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B3430CDE29A9589B00EA114B /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		B3430CE329ABA81F00EA114B /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +63,9 @@
 		B3430CBF29A94BB200EA114B /* SportApp */ = {
 			isa = PBXGroup;
 			children = (
-				B3430CD429A94DDA00EA114B /* MainModule */,
 				B3430CD729A94E2400EA114B /* Application */,
+				B3430CD429A94DDA00EA114B /* MainModule */,
+				B3430CE129ABA7EA00EA114B /* Extensions */,
 				B3430CD829A94E8300EA114B /* SupportingFiles */,
 			);
 			path = SportApp;
@@ -111,6 +114,22 @@
 				B3430CCE29A94BB300EA114B /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		B3430CE129ABA7EA00EA114B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B3430CE229ABA80400EA114B /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B3430CE229ABA80400EA114B /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B3430CE329ABA81F00EA114B /* UIView + Extension.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +205,7 @@
 			files = (
 				B3430CC529A94BB200EA114B /* MainViewController.swift in Sources */,
 				B3430CC129A94BB200EA114B /* AppDelegate.swift in Sources */,
+				B3430CE429ABA81F00EA114B /* UIView + Extension.swift in Sources */,
 				B3430CDF29A9589B00EA114B /* WeatherView.swift in Sources */,
 				B3430CDA29A94FC900EA114B /* CalendarView.swift in Sources */,
 				B3430CC329A94BB200EA114B /* SceneDelegate.swift in Sources */,

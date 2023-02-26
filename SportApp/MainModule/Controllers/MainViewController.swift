@@ -27,6 +27,7 @@ class MainViewController: UIViewController {
         button.layer.cornerRadius = 10
         button.setTitle("Add workout", for: .normal)
         button.setImage(UIImage(named: "plus"), for: .normal)
+        button.addShadowOnView()
         button.tintColor = #colorLiteral(red: 0.1411764706, green: 0.2941176471, blue: 0.262745098, alpha: 1)
         button.imageEdgeInsets = .init(top: 0, left: 20, bottom: 15, right: 0)
         button.titleEdgeInsets = .init(top: 50, left: -40, bottom: 0, right: 0)
