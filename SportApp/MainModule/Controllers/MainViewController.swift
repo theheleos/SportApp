@@ -40,6 +40,8 @@ class MainViewController: UIViewController {
 
     private let calendarView = CalendarView()
     private let weatherView = WeatherView()
+    private let workoutTodayLabel = UILabel(text: "Workout today")
+    private let mainTableView = MainTableView()
     
     override func viewDidLayoutSubviews() {
         userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.width / 2
@@ -63,6 +65,8 @@ class MainViewController: UIViewController {
         view.addSubview(userNameLabel)
         view.addSubview(addWorkoutButton)
         view.addSubview(weatherView)
+        view.addSubview(workoutTodayLabel)
+        view.addSubview(mainTableView)
     }
 }
 
@@ -91,7 +95,15 @@ extension MainViewController {
             weatherView.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 5),
             weatherView.leadingAnchor.constraint(equalTo: addWorkoutButton.trailingAnchor, constant: 5),
             weatherView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            weatherView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.205)
+            weatherView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.205),
+            
+            workoutTodayLabel.topAnchor.constraint(equalTo: addWorkoutButton.bottomAnchor, constant: 10),
+            workoutTodayLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            
+            mainTableView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor),
+            mainTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mainTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            mainTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
     
