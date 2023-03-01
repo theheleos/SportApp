@@ -11,6 +11,7 @@
 		B32DA5EE29AE785E00607885 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32DA5ED29AE785E00607885 /* MainTableView.swift */; };
 		B32DA5F029AE920200607885 /* UIStackView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32DA5EF29AE920200607885 /* UIStackView + Extensions.swift */; };
 		B32DA5F229AE93A900607885 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32DA5F129AE93A900607885 /* WorkoutTableViewCell.swift */; };
+		B32DA5F729AEBC6F00607885 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32DA5F629AEBC6F00607885 /* StatisticViewController.swift */; };
 		B3430CC129A94BB200EA114B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CC029A94BB200EA114B /* AppDelegate.swift */; };
 		B3430CC329A94BB200EA114B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CC229A94BB200EA114B /* SceneDelegate.swift */; };
 		B3430CC529A94BB200EA114B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CC429A94BB200EA114B /* MainViewController.swift */; };
@@ -26,6 +27,8 @@
 		B3430CED29ABC6EF00EA114B /* UIFont + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CEB29ABC6EF00EA114B /* UIFont + Extensions.swift */; };
 		B3430CF029ABCA1900EA114B /* CalendarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CEF29ABCA1900EA114B /* CalendarCollectionView.swift */; };
 		B3430CF429ABCFF600EA114B /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3430CF329ABCFF600EA114B /* CalendarCollectionViewCell.swift */; };
+		B3AF60D129AFCDCE00DABD0B /* StatisticsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF60D029AFCDCE00DABD0B /* StatisticsTableView.swift */; };
+		B3AF60D529AFCE7C00DABD0B /* StatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF60D429AFCE7C00DABD0B /* StatisticsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,7 @@
 		B32DA5ED29AE785E00607885 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		B32DA5EF29AE920200607885 /* UIStackView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extensions.swift"; sourceTree = "<group>"; };
 		B32DA5F129AE93A900607885 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		B32DA5F629AEBC6F00607885 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		B3430CBD29A94BB200EA114B /* SportApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3430CC029A94BB200EA114B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3430CC229A94BB200EA114B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +54,8 @@
 		B3430CEB29ABC6EF00EA114B /* UIFont + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont + Extensions.swift"; sourceTree = "<group>"; };
 		B3430CEF29ABCA1900EA114B /* CalendarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionView.swift; sourceTree = "<group>"; };
 		B3430CF329ABCFF600EA114B /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		B3AF60D029AFCDCE00DABD0B /* StatisticsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableView.swift; sourceTree = "<group>"; };
+		B3AF60D429AFCE7C00DABD0B /* StatisticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B32DA5F329AEBC1400607885 /* StatisticModule */ = {
+			isa = PBXGroup;
+			children = (
+				B32DA5F529AEBC3600607885 /* Views */,
+				B32DA5F429AEBC2700607885 /* Controllers */,
+			);
+			path = StatisticModule;
+			sourceTree = "<group>";
+		};
+		B32DA5F429AEBC2700607885 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B32DA5F629AEBC6F00607885 /* StatisticViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B32DA5F529AEBC3600607885 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3AF60D229AFCE5F00DABD0B /* Cells */,
+				B3AF60D029AFCDCE00DABD0B /* StatisticsTableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B3430CB429A94BB200EA114B = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +115,7 @@
 		B3430CBF29A94BB200EA114B /* SportApp */ = {
 			isa = PBXGroup;
 			children = (
+				B32DA5F329AEBC1400607885 /* StatisticModule */,
 				B3430CD729A94E2400EA114B /* Application */,
 				B3430CD429A94DDA00EA114B /* MainModule */,
 				B3430CE129ABA7EA00EA114B /* Extensions */,
@@ -178,6 +211,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		B3AF60D229AFCE5F00DABD0B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B3AF60D429AFCE7C00DABD0B /* StatisticsTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -253,7 +294,10 @@
 			files = (
 				B3430CC529A94BB200EA114B /* MainViewController.swift in Sources */,
 				B3430CC129A94BB200EA114B /* AppDelegate.swift in Sources */,
+				B3AF60D129AFCDCE00DABD0B /* StatisticsTableView.swift in Sources */,
 				B3430CE429ABA81F00EA114B /* UIView + Extensions.swift in Sources */,
+				B32DA5F729AEBC6F00607885 /* StatisticViewController.swift in Sources */,
+				B3AF60D529AFCE7C00DABD0B /* StatisticsTableViewCell.swift in Sources */,
 				B32DA5EC29AE757500607885 /* UILabe + Extensions.swift in Sources */,
 				B3430CEC29ABC6EF00EA114B /* UIColor + Extensions.swift in Sources */,
 				B32DA5F229AE93A900607885 /* WorkoutTableViewCell.swift in Sources */,

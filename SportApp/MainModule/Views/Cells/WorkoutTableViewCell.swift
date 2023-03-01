@@ -93,7 +93,7 @@ class WorkoutTableViewCell: UITableViewCell {
         
         labelsStackView = UIStackView(arrangedSubviews: [workoutRepsLabel, workoutSetsLabel], axis: .horizontal, spacing: 10)
         addSubview(labelsStackView)
-        addSubview(startButton)
+        contentView.addSubview(startButton)
     }
     
     @objc private func startButtonTapped() {
