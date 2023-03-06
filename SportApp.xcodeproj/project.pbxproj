@@ -34,6 +34,10 @@
 		B34D7EA329B36D1D00B844EB /* RepsOrTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D7EA229B36D1D00B844EB /* RepsOrTimerView.swift */; };
 		B3AF60D129AFCDCE00DABD0B /* StatisticsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF60D029AFCDCE00DABD0B /* StatisticsTableView.swift */; };
 		B3AF60D529AFCE7C00DABD0B /* StatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF60D429AFCE7C00DABD0B /* StatisticsTableViewCell.swift */; };
+		B3FFA74F29B65106004B567D /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FFA74E29B65106004B567D /* CloseButton.swift */; };
+		B3FFA75129B651A9004B567D /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FFA75029B651A9004B567D /* GreenButton.swift */; };
+		B3FFA75329B65AB4004B567D /* BrownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FFA75229B65AB4004B567D /* BrownTextField.swift */; };
+		B3FFA75529B65B8F004B567D /* GreenSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FFA75429B65B8F004B567D /* GreenSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,10 @@
 		B34D7EA229B36D1D00B844EB /* RepsOrTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsOrTimerView.swift; sourceTree = "<group>"; };
 		B3AF60D029AFCDCE00DABD0B /* StatisticsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableView.swift; sourceTree = "<group>"; };
 		B3AF60D429AFCE7C00DABD0B /* StatisticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewCell.swift; sourceTree = "<group>"; };
+		B3FFA74E29B65106004B567D /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		B3FFA75029B651A9004B567D /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
+		B3FFA75229B65AB4004B567D /* BrownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownTextField.swift; sourceTree = "<group>"; };
+		B3FFA75429B65B8F004B567D /* GreenSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +196,7 @@
 		B3430CE129ABA7EA00EA114B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B3FFA74D29B650F0004B567D /* Unique */,
 				B3430CE229ABA80400EA114B /* UIKit */,
 			);
 			path = Extensions;
@@ -266,6 +275,17 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		B3FFA74D29B650F0004B567D /* Unique */ = {
+			isa = PBXGroup;
+			children = (
+				B3FFA74E29B65106004B567D /* CloseButton.swift */,
+				B3FFA75029B651A9004B567D /* GreenButton.swift */,
+				B3FFA75229B65AB4004B567D /* BrownTextField.swift */,
+				B3FFA75429B65B8F004B567D /* GreenSlider.swift */,
+			);
+			path = Unique;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -340,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3430CC529A94BB200EA114B /* MainViewController.swift in Sources */,
+				B3FFA75129B651A9004B567D /* GreenButton.swift in Sources */,
 				B34D7E9D29B2333700B844EB /* NewWorkoutViewController.swift in Sources */,
 				B34D7EA129B36C6800B844EB /* DateAndReapetView.swift in Sources */,
 				B34D7EA329B36D1D00B844EB /* RepsOrTimerView.swift in Sources */,
@@ -350,6 +371,7 @@
 				B32DA5F729AEBC6F00607885 /* StatisticViewController.swift in Sources */,
 				B3AF60D529AFCE7C00DABD0B /* StatisticsTableViewCell.swift in Sources */,
 				B32DA5EC29AE757500607885 /* UILabe + Extensions.swift in Sources */,
+				B3FFA74F29B65106004B567D /* CloseButton.swift in Sources */,
 				B3430CEC29ABC6EF00EA114B /* UIColor + Extensions.swift in Sources */,
 				B32DA5F229AE93A900607885 /* WorkoutTableViewCell.swift in Sources */,
 				B3430CF429ABCFF600EA114B /* CalendarCollectionViewCell.swift in Sources */,
@@ -359,7 +381,9 @@
 				B3430CED29ABC6EF00EA114B /* UIFont + Extensions.swift in Sources */,
 				B3430CDF29A9589B00EA114B /* WeatherView.swift in Sources */,
 				B34D7E9F29B35EE300B844EB /* NameView.swift in Sources */,
+				B3FFA75529B65B8F004B567D /* GreenSlider.swift in Sources */,
 				B3430CDA29A94FC900EA114B /* CalendarView.swift in Sources */,
+				B3FFA75329B65AB4004B567D /* BrownTextField.swift in Sources */,
 				B3430CC329A94BB200EA114B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

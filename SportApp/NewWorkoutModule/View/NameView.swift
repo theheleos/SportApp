@@ -4,20 +4,7 @@ class NameView: UIView {
     
     private let nameLabel = UILabel(text: "Name")
     
-    private let nameTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .specialBrown
-        textField.borderStyle = .none
-        textField.layer.cornerRadius = 10
-        textField.textColor = .specialGray
-        textField.font = .robotoBold20()
-        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 0))
-        textField.leftViewMode = .always
-        textField.clearButtonMode = .always
-        textField.returnKeyType = .done
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        return textField
-    }()
+    private let nameTextField = BrownTextField()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

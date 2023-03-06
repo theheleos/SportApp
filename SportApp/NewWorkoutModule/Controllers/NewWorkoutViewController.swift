@@ -2,36 +2,15 @@ import UIKit
 
 class NewWorkoutViewController: UIViewController {
     
-    private let newWorkoutLabel: UILabel = {
-        let label = UILabel()
-        label.text = "NEW WORKOUT"
-        label.font = .robotoMedium24()
-        label.textColor = .specialGray
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    private let newWorkoutLabel = UILabel(text: "NEW WORKOUT", font: .robotoMedium24(), textColor: .specialGray)
     
-    private lazy var closeButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setBackgroundImage(UIImage(named: "closeButton"), for: .normal)
-        button.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
+    private lazy var closeButton = CloseButton(type: .system)
     
     private let nameView = NameView()
+    private let dateAndReapeatView = DateAndRepeatView()
+    private let repsOrTimerView = RepsOrTimerView()
     
-    private let testSlider: UISlider = {
-        let slider = UISlider()
-        slider.minimumValue = 0
-        slider.maximumValue = 10
-        slider.maximumTrackTintColor = .specialLightBrown
-        slider.minimumTrackTintColor = .specialGreen
-        slider.translatesAutoresizingMaskIntoConstraints = false
-        return slider
-    }()
-    
-    let dateAndReapeatView = DateAndRepeatView()
+    private lazy var saveButton = GreenButton(text: "SAVE")
     
     override func viewDidLoad() {
         super.viewDidLoad()
