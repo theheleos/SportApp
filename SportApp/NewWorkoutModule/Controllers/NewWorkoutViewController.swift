@@ -12,6 +12,8 @@ class NewWorkoutViewController: UIViewController {
     
     private lazy var saveButton = GreenButton(text: "SAVE")
     
+    private var stackView = UIStackView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,15 +26,22 @@ class NewWorkoutViewController: UIViewController {
         
         view.addSubview(newWorkoutLabel)
         view.addSubview(closeButton)
-        view.addSubview(nameView)
-        view.addSubview(dateAndReapeatView)
+        closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
         
+        stackView = UIStackView(arrangedSubviews: [nameView, dateAndReapeatView, repsOrTimerView], axis: .vertical, spacing: 20)
+        view.addSubview(stackView)
+        
+        view.addSubview(saveButton)
+        saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
     }
     
     @objc private func closeButtonTapped() {
         dismiss(animated: true)
     }
     
+    @objc private func saveButtonTapped() {
+        print("save")
+    }
 }
 
 extension NewWorkoutViewController {
@@ -46,17 +55,18 @@ extension NewWorkoutViewController {
             closeButton.heightAnchor.constraint(equalToConstant: 33),
             closeButton.widthAnchor.constraint(equalToConstant: 33),
             
-            nameView.topAnchor.constraint(equalTo: newWorkoutLabel.bottomAnchor, constant: 10),
-            nameView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            nameView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             nameView.heightAnchor.constraint(equalToConstant: 60),
+            dateAndReapeatView.heightAnchor.constraint(equalToConstant: 115),
+            repsOrTimerView.heightAnchor.constraint(equalToConstant: 340),
             
+            stackView.topAnchor.constraint(equalTo: newWorkoutLabel.bottomAnchor, constant: 10),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
-            dateAndReapeatView.topAnchor.constraint(equalTo: nameView.bottomAnchor, constant: 20),
-            dateAndReapeatView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            dateAndReapeatView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            dateAndReapeatView.heightAnchor.constraint(equalToConstant: 110),
-           
+            saveButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 20),
+            saveButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            saveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            saveButton.heightAnchor.constraint(equalToConstant: 55)
         ])
     }
 }

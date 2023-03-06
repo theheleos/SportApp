@@ -19,7 +19,7 @@ class GreenButton: UIButton {
     }
     
     private func configure() {
-        backgroundColor = .specialDarkGreen
+        backgroundColor = .specialGreen
         titleLabel?.font = .robotoBold16()
         tintColor = .white
         layer.cornerRadius = 10
