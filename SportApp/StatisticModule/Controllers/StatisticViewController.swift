@@ -2,13 +2,27 @@ import UIKit
 
 class StatisticViewController: UIViewController {
     
-    private let statisticsLabel: UILabel = {
+    private let statisticLabel: UILabel = {
         let label = UILabel()
         label.text = "STATISTICS"
         label.font = .robotoMedium24()
         label.textColor = .specialGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    }()
+    
+    private lazy var segmentedControl: UISegmentedControl = {
+        let segmentedControl = UISegmentedControl(items: ["Week", "Month"])
+        segmentedControl.selectedSegmentIndex = 0
+        segmentedControl.backgroundColor = .specialGreen
+        segmentedControl.selectedSegmentTintColor = .specialYellow
+        segmentedControl.setTitleTextAttributes([.font: UIFont.robotoMedium16() as Any,
+                                                 .foregroundColor: UIColor.white], for: .normal)
+        segmentedControl.setTitleTextAttributes([.font: UIFont.robotoMedium16() as Any,
+                                                .foregroundColor: UIColor.specialGray], for: .selected)
+        segmentedControl.addTarget(self, action: #selector(segmentedChange), for: .valueChanged)
+        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
+        return segmentedControl
     }()
     
     private let exercisesLabel = UILabel(text: "Exercises")
@@ -22,27 +36,39 @@ class StatisticViewController: UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = UIColor(red: 240/250, green: 237/250, blue: 226/250, alpha: 1)
+        view.backgroundColor = .specialBackground
         
-        view.addSubview(statisticsLabel)
+        view.addSubview(statisticLabel)
         view.addSubview(exercisesLabel)
         view.addSubview(statisticsTableView)
+        view.addSubview(segmentedControl)
     }
+    
+    @objc private func segmentedChange() {
+    
+    }
+    
 }
 
 extension StatisticViewController {
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            statisticsLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            statisticsLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            statisticLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            statisticLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             
-            exercisesLabel.topAnchor.constraint(equalTo: statisticsLabel.bottomAnchor, constant: 75),
+            segmentedControl.topAnchor.constraint(equalTo: statisticLabel.bottomAnchor, constant: 20),
+            segmentedControl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            segmentedControl.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            exercisesLabel.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 10),
             exercisesLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             
-            statisticsTableView.topAnchor.constraint(equalTo: exercisesLabel.bottomAnchor, constant: 10),
+            statisticsTableView.topAnchor.constraint(equalTo: exercisesLabel.bottomAnchor),
             statisticsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             statisticsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            statisticsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            statisticsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            
         ])
     }
 }

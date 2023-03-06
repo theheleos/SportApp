@@ -34,6 +34,7 @@ class MainViewController: UIViewController {
         button.tintColor = .specialDarkGreen
         button.imageEdgeInsets = .init(top: 0, left: 20, bottom: 15, right: 0)
         button.titleEdgeInsets = .init(top: 50, left: -40, bottom: 0, right: 0)
+        button.addTarget(self, action: #selector(addWorkoutButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -68,6 +69,13 @@ class MainViewController: UIViewController {
         view.addSubview(workoutTodayLabel)
         view.addSubview(mainTableView)
     }
+    
+    @objc private func addWorkoutButtonTapped() {
+        let newWorkoutViewController = NewWorkoutViewController()
+        newWorkoutViewController.modalPresentationStyle = .fullScreen
+        present(newWorkoutViewController, animated: true)
+    }
+    
 }
 
 extension MainViewController {

@@ -3,7 +3,7 @@ import UIKit
 
 class StatisticsTableViewCell: UITableViewCell {
     
-    private let exerciseLabel: UILabel = {
+    private let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Biceps"
         label.textColor = .specialGray
@@ -12,32 +12,20 @@ class StatisticsTableViewCell: UITableViewCell {
         return label
     }()
     
-    private let counterLabel: UILabel = {
+    private let differenceLabel: UILabel = {
         let label = UILabel()
         label.text = "+2"
         label.font = .robotoMedium24()
         label.textColor = .specialGreen
+        label.textAlignment = .right
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private let beforeLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Before: 18"
-        label.textColor = .specialLightBrown
-        label.font = .robotoMedium14()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    private let beforeLabel = UILabel(text: "Before: 18")
+    private let nowLabel = UILabel(text: "Now: 20")
     
-    private let nowLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Now: 20"
-        label.textColor = .specialLightBrown
-        label.font = .robotoMedium14()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    private var stackView = UIStackView()
     
     private let lineView: UIView = {
         let view = UIView()
@@ -45,8 +33,6 @@ class StatisticsTableViewCell: UITableViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
-    private var labelsStackView = UIStackView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -63,31 +49,32 @@ class StatisticsTableViewCell: UITableViewCell {
         backgroundColor = .clear
         selectionStyle = .none
         
-        addSubview(exerciseLabel)
-        addSubview(counterLabel)
+        addSubview(nameLabel)
+        addSubview(differenceLabel)
         addSubview(lineView)
         
-        labelsStackView = UIStackView(arrangedSubviews: [beforeLabel, nowLabel], axis: .horizontal, spacing: 10)
-        labelsStackView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(labelsStackView)
+        stackView = UIStackView(arrangedSubviews: [beforeLabel, nowLabel], axis: .horizontal, spacing: 10)
+
+        addSubview(stackView)
     }
 }
 
 extension StatisticsTableViewCell {
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            exerciseLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            exerciseLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            differenceLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            differenceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            differenceLabel.widthAnchor.constraint(equalToConstant: 50),
             
-            labelsStackView.topAnchor.constraint(equalTo: exerciseLabel.bottomAnchor, constant: 5),
-            labelsStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            //labelsStackView.heightAnchor.constraint(equalToConstant: 27),
+            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            nameLabel.trailingAnchor.constraint(equalTo: differenceLabel.leadingAnchor, constant: -20),
             
-            counterLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            counterLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            stackView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 0),
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             
             lineView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            lineView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            lineView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
             lineView.bottomAnchor.constraint(equalTo: bottomAnchor),
             lineView.heightAnchor.constraint(equalToConstant: 1)
         ])

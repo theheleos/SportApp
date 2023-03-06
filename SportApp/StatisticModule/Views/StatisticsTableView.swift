@@ -30,9 +30,10 @@ class StatisticsTableView: UITableView {
     }
 }
 
+//MARK: - Extensions
 extension StatisticsTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,6 +46,6 @@ extension StatisticsTableView: UITableViewDataSource {
 
 extension StatisticsTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        70
+            55
     }
 }
